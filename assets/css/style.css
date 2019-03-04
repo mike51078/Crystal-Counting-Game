@@ -1,0 +1,13 @@
+
+body {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNV3fj3c9yX44yTtIkJ4EtWF9KXH_Ef8KRd5vjJJqpHLsjrIdUlA);
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    overflow: auto;
+}
+ 
+img.gems {
+    height: 200px;
+}
