@@ -1,9 +1,9 @@
-// $(document).ready(function(){
+$(document).ready(function() {
  
 
     var scoreToMatch = Math.floor(Math.random()*102+19)
     
-    $('#scoreToMatch').text(scoreToMatch);
+    $("#scoreToMatch").text(scoreToMatch);
     
     var valCrystal1 = Math.floor(Math.random() * 12 + 1)
     var valCrystal2 = Math.floor(Math.random() * 12 + 1)
@@ -15,45 +15,44 @@
     var losses = 0;
     
 
-    $('.red').on ('click', function(){
+    $('#red').on('click', function(){
       totalScore = totalScore + valCrystal1;
       console.log("New Score= " + totalScore);
-      $('#totalScore').text(totalScore); 
-            //Win & lose conditions
+      $('#totalScore').text("Total Score: " + totalScore); 
           if (totalScore == scoreToMatch){
-            woohoo();
+            winner();
           }
           else if ( totalScore > scoreToMatch){
             loser();
           }   
     })  
-    $('.blue').on ('click', function(){
+    $('#blue').on('click', function(){
       totalScore = totalScore + valCrystal2;
       console.log("New totalScore= " + totalScore);
-      $('#totalScore').text(totalScore); 
+      $('#totalScore').text("Total Score: " + totalScore);  
           if (totalScore == scoreToMatch){
-            woohoo();
+            winner();
           }
           else if ( totalScore > scoreToMatch){
             loser();
           } 
-    })  
-    $('.orange').on ('click', function(){
+   })  
+    $('#orange').on('click', function(){
       totalScore = totalScore + valCrystal3;
       console.log("New totalScore= " + totalScore);
-      $('#totalScore').text(totalScore);
+      $('#totalScore').text("Total Score: " + totalScore); 
   
             if (totalScore == scoreToMatch){
-            woohoo();
+            winner();
           }
           else if ( totalScore > scoreToMatch){
             loser();
           } 
     })  
-    $('.green').on ('click', function(){
+    $('#green').on('click', function(){
       totalScore = totalScore + valCrystal4;
       console.log("New totalScore= " + totalScore);
-      $('#totalScore').text(totalScore); 
+      $('#totalScore').text("Total Score: " + totalScore); 
         
         if (totalScore == scoreToMatch){
         winner();
@@ -64,7 +63,7 @@
     });
     $('#wins').text(wins);
     $('#losses').text(losses);
-    
+  
       
         function winner(){
             alert("Winner! Winner!");
@@ -80,16 +79,16 @@
             reset()
         }
 
-    // Reset game
     function reset(){
         scoreToMatch = Math.floor(Math.random() * 101 + 19);
           console.log(scoreToMatch)
-          $('#scoreToMatch').text(scoreToMatch);
+          $('#scoreToMatch').text("Score to Match: " + scoreToMatch);
           var valCrystal1 = Math.floor(Math.random() * 12 + 1)
           var valCrystal2 = Math.floor(Math.random() * 12 + 1)
           var valCrystal3 = Math.floor(Math.random() * 12 + 1)
           var valCrystal4 = Math.floor(Math.random() * 12 + 1)
           totalScore= 0;
-          $('#totalScore').text(totalScore);
+          $('#totalScore').text("Total Score: " + totalScore); 
           } 
-  }); 
+
+});
