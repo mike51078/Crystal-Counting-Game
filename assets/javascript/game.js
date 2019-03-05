@@ -55,34 +55,34 @@
       console.log("New totalScore= " + totalScore);
       $('#totalScore').text(totalScore); 
         
-            if (totalScore == scoreToMatch){
-            woohoo();
+        if (totalScore == scoreToMatch){
+        winner();
           }
-          else if ( totalScore > scoreToMatch){
-            loser();
-          }
+        else if (totalScore > scoreToMatch){
+        loser();
+        }
     });
     $('#wins').text(wins);
     $('#losses').text(losses);
     
-        // Display wins
-        function woohoo(){
-            alert("Congrats! You won!");
+      
+        function winner(){
+            alert("Winner! Winner!");
               wins++; 
               $('#wins').text(wins);
               reset();
             }
-            // Display losses
-            function loser(){
-            alert ("Sorry! You lose!");
-              losses++;
-              $('#losses').text(losses);
-              reset()
-            }
+            
+        function loser(){
+            alert ("Try Again!");
+            losses++;
+            $('#losses').text(losses);
+            reset()
+        }
 
     // Reset game
     function reset(){
-        scoreToMatch = Math.floor(Math.random()*102+19);
+        scoreToMatch = Math.floor(Math.random() * 101 + 19);
           console.log(scoreToMatch)
           $('#scoreToMatch').text(scoreToMatch);
           var valCrystal1 = Math.floor(Math.random() * 12 + 1)
