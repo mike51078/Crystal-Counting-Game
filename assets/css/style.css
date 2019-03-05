@@ -8,8 +8,9 @@ body {
     overflow: auto;
 }
  
-img.gems {
+img.gem {
     height: 200px;
+    width: 200px;
 }
 
  body.container {
