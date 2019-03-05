@@ -11,3 +11,7 @@ body {
 img.gems {
     height: 200px;
 }
+
+ body.container {
+    color: #fffff;
+}

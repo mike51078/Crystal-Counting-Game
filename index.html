@@ -1,59 +1,92 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @mike51078 Sign out
+1
+0 1 Bronzeowl/crystal-collector
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
+crystal-collector/index.html
+@Bronzeowl Bronzeowl Final Commit
+127e447  on Apr 2, 2017
+72 lines (64 sloc)  3.13 KB
+    
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Crystal Game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href = 'assets/css/style.css'>
-    <script src="assets/javascript/game.js"></script>
+  <meta charset="utf-8">
+  <title>Crystal Collector</title>
+  <!-- Reset CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+  <!-- Latest compiled and minified CSS (Bootstrap) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme (Bootstrap) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified Javascript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
- 
-    <div class="container">
+
+  <div class="jumbotron text-center">
+    <h1>Crystal Collector</h1></div>
+
+      <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="page-header">
-                    <h1>Crystal Guessing Game</h1>
-                </div>
-            </div>
-        <div class = "row">
-            <div class = "col-md-12">
-                <p>Game Instructions</p>
-            </div>
-        <div class = "row">
-            <div class = "col-md-6">
-                <p>Number to Guess: <span id = "numberToGuess"></span></p>
-            </div>
-            <div class = "col-md-6">
-                <p>Wins: <span id = "wins"></span></p>
-            </div>
-        <div class = "row">
-            <div class = "col-md-6">
-                <p>Current Number: <span id = "displayUserScore"></span></p>
-            </div>
-            <div class = "col-md-6">
-                <p>Losses: <span id = "losses"></span></p>
-            </div>
-        <div class = "row" id = "gemRow">
-            <div class = "col-md-3 gem-column">
-                <img class = "gems blue" id = "crystal1"src = "assets/images/blue-crystal.png">
-            </div>
-            <div class = "col-md-3 gem-column">
-                <img class = "gems purple" id = "crystal2" src = "assets/images/purple-crystal.png">
-            </div>
-            <div class = "col-md-3 gem-column">
-                <img class = "gems red" id = "crystal3" src = "assets/images/red-crystal.png">
-            </div>
-            <div class = "col-md-3 gem-column">
-                <img class = "gems orange" id = "crystal4" src = "assets/images/orange-crystal.png">
-            </div>
+          <div class="col-sm-12 instructions">
+            <h2>Instructions</h2> 
+            <p>You will be given a random number at the start of the game.</p>
+            <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+            <p>You win the game by matching your total score to the random number. You lost the game if your total score goes above the random number.</p>
+            <p>The value of each crystal is hidden from you until you click on it.</p>
+          </div>
         </div>
+
+    <div class="row">
+      <div class="col-sm-9">
+        <h2>Score to match: <span id="scoreToMatch"></span></h2>
+      </div>
+    <div class="col-sm-3">
+        <h3>Wins: <span id="wins"></span></h3>
+        <h3 class="text-left">Losses: <span id="losses"></span></h3>
+      </div>
     </div>
 
+      <div class="row text-center">
+        <div class="col-sm-3">
+        <img src="assets/images/red-crystal.png" class="img-thumnail red" alt="Red Crystal" width="200" height="200" />
+        </div>
+        <div class="col-sm-3">
+        <img src="assets/images/blue-crystal.png" class="img-thumbnail blue" alt="Blue Crystal" width="200" height="200" />
+        </div>
+        <div class="col-sm-3">
+        <img src="assets/images/orange-crystal.png" class="img-thumnail orange" alt="Orange Crystal" width="200" height="200" />
+        </div>
+        <div class="col-sm-3">
+          <img src="assets/images/green-crystal.jpg"img-thumnail green" alt="Green Crystal" width="200" height="200" />
+        </div>
+      </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+      <h2>Your total score is: <span id="totalScore"></span></h2>
+      </div>
+    </div>
+    </div>
+
+
+</body>
+<!-- JS -->
+<script src="assets/javascript/game.js"></script> 
+</html>
 
 </div>
     
