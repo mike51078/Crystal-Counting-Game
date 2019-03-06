@@ -11,56 +11,65 @@
 
 </head>
 <body>
+<!-- header and displaying title for game -->
     <div class="container">
     <div class="jumbotron text-center">
     <h1>Crystal Game</h1>
     </div>
-
-
+<!-- table containing content for the game -->
+    <div id="table">
         <div class="row">
           <div class="col-sm-12 instructions">
+<!-- instructions for the game -->
             <h2>Instructions</h2> 
             <p>You will be given a random number at the start of the game.</p>
             <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-            <p>You win the game by matching your total score to the random number. You lost the game if your total score goes above the random number.</p>
+            <p>You win the game by matching your total score to the random number, and you lose the game if your total score goes above the random number.</p>
             <p>The value of each crystal is hidden from you until you click on it.</p>
+            <p>Each time when the game starts, the game will hange the value of each crystal.</p>
           </div>
         </div>
-
+<!-- line separating instructions from the remaining of the game -->
+        <hr class = "hrAfterInst"><br>
     <div class = "row">
-        <div class = "col-sm-6">
+        <div class = "col-sm-6 scoring">
+ <!-- display of randomized score which user has to match           -->
             <p>Score to match: <span id = "scoreToMatch"></span></p>
         </div>
-        <div class = "col-sm-6">
+        <div class = "col-sm-6 winloss">
+ <!-- display of total number of wins for user           -->
             <p>Wins: <span id = "wins"></span></p>
         </div>
     <div class = "row">
-        <div class = "col-sm-6">
+        <div class = "col-sm-6 scoring" id = "ts">
+<!-- diplay of current total score for user as crystals are clicked -->
             <p>Total Score: <span id = "totalScore"></span></p>
         </div>
-        <div class = "col-sm-6">
+        <div class = "col-sm-6 winloss">
+<!-- diplay of total number of losses for user -->
             <p>Losses: <span id="losses"></span></p>
         </div>
     
-
+<!-- contains the image information for the crystals -->
       <div class="row text-center">
-        <div class="col-sm-3">
+        <div class="col-3">
         <img src="assets/images/red-crystal.png" class = "gem" id= "red"/>
         </div>
-        <div class="col-sm-3">
+        <div class="col-3">
         <img src="assets/images/blue-crystal.png" class = "gem" id ="blue"/>
         </div>
-        <div class="col-sm-3">
+        <div class="col-3">
         <img src="assets/images/orange-crystal.png" class = "gem" id="orange"/>
         </div>
-        <div class="col-sm-3">
-          <img src="assets/images/green-crystal.jpg" class = "gem" id= "green"/>
+        <div class="col-3">
+          <img src="assets/images/green-crystal.png" class = "gem" id= "green"/>
         </div>
       </div>
 
     
     </div>
-
+    </div>  
+    </div>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

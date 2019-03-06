@@ -1,4 +1,20 @@
 
+/* adjustment of font size for game title */
+h1 {
+    font-size: 55px;
+}
+
+/* styling for jumbotron containing game title */
+.jumbotron {
+    background: yellow;
+    opacity: 0.7;
+    border-radius: 25px;
+    margin-top: 25px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+/* styling for the background */
 body {
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNV3fj3c9yX44yTtIkJ4EtWF9KXH_Ef8KRd5vjJJqpHLsjrIdUlA);
     height: 100%;
@@ -8,11 +24,42 @@ body {
     overflow: auto;
 }
  
-img.gem {
-    height: 200px;
-    width: 200px;
+/* styling for the table continaing the instructions and game content */
+#table {
+    background: yellow;
+    opacity: 0.7;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    border-radius: 25px;
+    padding: 15px;
 }
 
- body.container {
-    color: #fffff;
+/* changing of font style for the instructions */
+.instructions {
+    font-style: italic;
+}
+
+/* styling for the HR showing after the instructions */
+.hrAfterInst {
+    border: solid 1.5px;
+    height: 3px;
+    border-radius: 25px;
+}
+
+/* styling of the text displaying wins and losses */
+.scoring, .winloss{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/* styling for the size of the gems */
+.gem {
+    height: 75%;
+    width: 75%;
+}
+
+/* adjustment for padding of total score as it displays in the table */
+#ts{
+    padding-left: 30px;
 }
