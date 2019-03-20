@@ -9,3 +9,5 @@ Technologies used for this project:
 * JavaScript
 * JQuery
 * BootStrap / CSS Framework
+
+If you have any questions or remarks, please reach out to me at elcid00@aol.com.
